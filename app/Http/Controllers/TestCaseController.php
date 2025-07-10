@@ -57,7 +57,7 @@ class TestCaseController extends Controller
     {
         $systems = System::where('status', 'active')->get();
         $testCase->load('steps');
-        return view('test-cases.edit', compact('testCase', 'systems'));
+        return view('test-cases.create', compact('testCase', 'systems'));
     }
 
     public function update(Request $request, TestCase $testCase)
